@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+.body {
+    background: #f5f5f5;
+    min-width: 230px;
+    max-width: 511px;
+    margin: 0 auto;
+}
+.container {
+    margin: 130px 0 40px 0;
+    position: relative;
+}
+.title {
+    font-size: 100px;
+    text-align: center;
+    width: 100%;
+    color: #E4B4B4;
+}
+#myUL {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.listitem {
+    padding: 16px 16px 16px 60px;
+    position: relative;
+    cursor: pointer;
+    width: 511px;
+    height: 50px;
+    background: #fff;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 20px;
+}
+#myInput {
+    width: 511px;
+    padding: 16px 16px 16px 60px;
+    border: none;
+    outline: none;
+    box-shadow: 1px 28px 58px 1px rgba(0,0,0,0.2);;
+    caret-color: lightgrey;
+}
+#myInput::placeholder {
+    color: #CAC8C8;
+    font-size: 24px;
+    font-style: italic;
+}
+.form {
+    display:flex;
+    flex-direction:row;
+}
+.fa-times {
+    position: absolute;
+    padding: 15px;
+    right: 0;
+    top: 0;
+}
+/* .fa-times::before {
+    content: '';
+    position: absolute;
+    padding: 15px;
+    right: 0;
+    top: 0;
+} */
+/* .fa-times:hover {
+    color: #E74C3C;
+} */
+
+/* .listitem:hover > .fas {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+} */
+
+/* When clicked on add a strike out text */
+#myUL .listitem.checked {
+    text-decoration: line-through;
+}
+/* Add a "checked" mark when clicked on */
+#myUL .listitem.checked::before {
+    content: '';
+    position: absolute;
+    border: solid #2ECC71;
+    border-width: 0 2px 2px 0;
+    top: 17px;
+    left: 15px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+.count {
+    float: left;
+}
+.delete-completed {
+    float: right;
+    cursor: pointer;
+}
+.filter {
+    cursor: pointer;
+    color: inherit;
+    margin: 2px;
+    padding: 3px 7px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    outline: 3px;
+}
+.filter.active {
+    border-color: rgba(175, 47, 47, 0.2);
+}
+.footer {
+	color: #777;
+	padding: 10px 15px;
+	height: 20px;
+	text-align: center;
+    border-top: 1px solid grey;
+    display: none;
+}
+.footer:before {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 50px;
+	overflow: hidden;
+}

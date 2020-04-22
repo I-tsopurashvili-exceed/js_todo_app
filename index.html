@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/cc787e5431.js" crossorigin="anonymous"></script>
+</head>
+<body class="body">
+    
+    <div class="todoapp">
+        <h1 class="title">todos</h1>
+        <div class="form">
+            <input id="myInput" type="text" type="submit" size="50" placeholder="What needs to be done?" maxlength="20" autofocus>
+            <span id="addButton" onclick="newElement()"></span>
+        </div>
+
+        <ul id="myUL">
+            
+        </ul>
+
+        <div class="footer" id="footer">
+            <div id="buttons">
+                <span class="count" id="myCount"></span>
+                <!-- <span class="filter active" onclick="filterSelection('all')">All</span>
+                <span class="filter" onclick="filterSelection('active')">Active</span>
+                <span class="filter" onclick="filterSelection('completed')">Completed</span> -->
+                <span class="filter active" onclick="filterAll()">All</span>
+                <span class="filter" onclick="filterActive()">Active</span>
+                <span class="filter" onclick="filterCompleted()">Completed</span>
+                <span class="delete-completed" id="deleteCompleted" onclick="deleteCompleted()">Clear Completed 0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
