@@ -55,25 +55,9 @@
     right: 0;
     top: 0;
 }
-/* .fa-times::before {
-    content: '';
-    position: absolute;
-    padding: 15px;
-    right: 0;
-    top: 0;
-} */
-/* .fa-times:hover {
+.fa-times:hover {
     color: #E74C3C;
-} */
-
-/* .listitem:hover > .fas {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 15px;
-} */
-
+}
 /* When clicked on add a strike out text */
 #myUL .listitem.checked {
     text-decoration: line-through;

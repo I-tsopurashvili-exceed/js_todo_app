@@ -24,10 +24,11 @@ function newElement() {
     count = getCount();
     document.getElementById('myCount').innerHTML = count + ' items left';
     document.getElementById('myInput').value = '';
+
+    document.getElementById("myUL").addEventListener('mouseover', mouseOver);
+        function mouseOver() {
     let closeIcon = document.createElement('i');
     closeIcon.className = "fas fa-times";
-    // closeIcon.style.display = "none";
-    closeIcon.style.visibility = "hidden";
     li.appendChild(closeIcon);
     for(i = 0; i < close.length; i++) {
         close[i].addEventListener('click', function(e) {
@@ -38,23 +39,12 @@ function newElement() {
             div.style.display = "none";
         });
     }
-}
 
-// Mouseover close icon
-
-// let hoverX = document.querySelector('ul');
-// hoverX.addEventListener('mouseover', function(hov) {
-//     if(hov.target.tagName = 'li');
-//     hov.target.classList.toggle('fa-times');
-// }, false);
-// hoverX.addEventListener('mouseout', function(hov) {
-//     if(hov.target.tagName = 'li');
-//     hov.target.classList.toggle('fa-times');
-// }, false);
-
-document.getElementById("myUL").addEventListener('mouseover', mouseOver);
-function mouseOver() {
-    document.getElementsByClassName("fas").style.visibility = "visible";
+    document.getElementById("myUL").addEventListener('mouseout', mouseOut);
+        function mouseOut() {
+        closeIcon.style.visibility = "hidden";
+    }
+    }
 }
 
 // Click on a close button to hide the current list item
