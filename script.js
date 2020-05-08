@@ -24,12 +24,10 @@ function newElement() {
     count = getCount();
     document.getElementById('myCount').innerHTML = count + ' items left';
     document.getElementById('myInput').value = '';
-
-    document.getElementById("myUL").addEventListener('mouseover', mouseOver);
-        function mouseOver() {
     let closeIcon = document.createElement('i');
     closeIcon.className = "fas fa-times";
     li.appendChild(closeIcon);
+    closeIcon.style.visibility = "hidden";
     for(i = 0; i < close.length; i++) {
         close[i].addEventListener('click', function(e) {
             e.target.parentElement.remove();
@@ -38,8 +36,10 @@ function newElement() {
             let div = this.parentElement;
             div.style.display = "none";
         });
+    li.addEventListener('mouseover', mouseOver);
+        function mouseOver() {
+            closeIcon.style.visibility = "visible";
     }
-
     document.getElementById("myUL").addEventListener('mouseout', mouseOut);
         function mouseOut() {
         closeIcon.style.visibility = "hidden";
