@@ -7,9 +7,10 @@
     max-width: 511px;
     margin: 0 auto;
 }
-.container {
-    margin: 130px 0 40px 0;
+.todoapp {
     position: relative;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 .title {
     font-size: 100px;
@@ -48,6 +49,7 @@
 .form {
     display:flex;
     flex-direction:row;
+    position: relative;
 }
 .fa-times {
     position: absolute;
@@ -57,6 +59,23 @@
 }
 .fa-times:hover {
     color: #E74C3C;
+}
+.fa-chevron-down {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #BDC3C7;
+}
+.circle {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 28px;
+    left: 0;
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    width: 28px;
 }
 /* When clicked on add a strike out text */
 #myUL .listitem.checked {
@@ -95,9 +114,10 @@
     border-color: rgba(175, 47, 47, 0.2);
 }
 .footer {
-	color: #777;
+    color: #777;
+    background: #fff;
 	padding: 10px 15px;
-	height: 20px;
+	height: 45px;
 	text-align: center;
     border-top: 1px solid grey;
     display: none;
@@ -109,5 +129,10 @@
 	bottom: 0;
 	left: 0;
 	height: 50px;
-	overflow: hidden;
+    overflow: hidden;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+	            0 8px 0 -3px #f6f6f6,
+	            0 9px 1px -3px rgba(0, 0, 0, 0.2),
+	            0 16px 0 -6px #f6f6f6,
+	            0 17px 2px -6px rgba(0, 0, 0, 0.2);
 }
