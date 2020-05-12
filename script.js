@@ -45,10 +45,14 @@ function newElement() {
         closeIcon.style.visibility = "hidden";
     }
     }
+
+    let circle = document.createElement('span');
+    circle.className = "circle";
+    li.appendChild(circle);
 }
 
 // Click on a close button to hide the current list item
-let close = document.getElementsByClassName('fas');
+let close = document.getElementsByClassName('fa-times');
 let i;
 for(i = 0; i < close.length; i++) {
     close[i].addEventListener('click', function() {
